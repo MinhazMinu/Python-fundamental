@@ -85,6 +85,11 @@ class Rectangle:
     def diagonal(self, width, height):
         return (width**2 + height**2) ** 0.5
 
+    @diagonal.deleter
+    def diagonal(self):
+        print("deleting diagonal")
+        del self.diagonal
+
     def get_area(self):
         return self.width * self.height
 

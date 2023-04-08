@@ -250,3 +250,12 @@ class Rectangle:
 ```
 
 This wont brake client code, hance it was backward compatible
+
+-   _@diagonal.deleter_ property can used to run functionality when a property is deleted
+
+```py
+    @diagonal.deleter
+    def diagonal(self):
+        print("deleting diagonal")
+        del self.diagonal
+```
